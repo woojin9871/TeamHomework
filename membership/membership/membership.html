@@ -4,93 +4,99 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>회원가입 창</title>
+    <title>회원가입창</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/membership.css">
 </head>
 <body>
     <!-- 전체 영역 -->
     <div class="container">
+        <span>회원가입</span>
         <!-- 회원가입 영역 -->
         <form action="" method="post">
             <!-- 회원가입 박스 -->
-            <div class="mambership_wrap">
+            <div class="membership_wrap">
                 <!-- 중첩 박스 -->
                 <div id="membership">
 
                     <!-- 로고 -->
 
                     <!-- 아이디 -->
-                    <li>
+                    <div>
                         <p class="tit">아이디</p>
                         <p class="form">
                             <input type="text" name="join_id" placeholder="4~20자 : 영문 소문자, 숫자조합">
                             <span class="border"></span>
                         </p>
-                        <div class="good" style="display: none;">사용 가능한 아이디입니다</div>
-                        <div class="alert">아이디는 4~20자리 영문 소문자, 숫자 이어야 합니다.</div>
-                    </li>
+                        <!-- <div class="good" style="display: none;">사용 가능한 아이디입니다</div> -->
+                        <!-- <div class="alert">아이디는 4~20자리 영문 소문자, 숫자 이어야 합니다.</div> -->
+                    </div>
                         
                     <!-- 비밀번호 -->
-                    <li>
+                    <div>
                         <p class="tit">비밀번호</p>
                         <p class="form">
                             <input type="password" name="join_pw" placeholder="영문 대소문자, 숫자, 특수문자 중 2종류 이상을 조합하여 최소 8자리 이상">
                         </p>
-                    </li>
-                    <li>
+                    </div>
+                    <div>
                         <p class="tit">비밀번호 확인</p>
                         <p class="form">
                             <input type="password" name="check_pw" placeholder="영문 대소문자, 숫자, 특수문자 중 2종류 이상을 조합하여 최소 8자리 이상">
                         </p>
-                    </li>
-                    <li>
+                    </div>
+                    <div>
                         <p class="tit">이름</p>
                         <p class="form">
                             <input type="text" name="join_name">
                         </p>
-                    </li>
-                    <li>
+                    </div>
+                    <div>
                         <p class="tit">휴대전화</p>
                         <ul class="form_tel">
-                            <li>
+                            <div>
                                 <select name="join_cell">
                                     <option value="010">010</option>
                                     <option value="011">011</option>
                                     <option value="016">016</option>
                                     <option value="017">017</option>
                                 </select>
-                            </li>
-                            <li>
-                                ::before
-                                <input type="text" name="join_cell1" maxlength="4"
+                                <!-- <span>-</span> -->
+                            </div>
+                            <div>
+                                <!-- ::before -->
+                                <input type="text" name="join_cell1" maxlength="4" size="4"
                                 oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
-                            </li>
-                            <li>
-                                ::before
-                                <input type="text" name="join_cell2" maxlength="4"
+                                <!-- <span>-</span> -->
+                            </div>
+                            <div>
+                                <!-- ::before -->
+                                <input type="text" name="join_cell2" maxlength="4" size="4"
                                 oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
-                            </li>
+                            </div>
                         </ul>
-                        <p class="caution_cell" style="padding-top: 10px;">*숫자만 입력 가능합니다.</p>
-                        <p class="good2" style="display: none;">등록 가능한 핸드폰번호입니다.</p>
-                        <p class="alert2" style="display: none;">이미 등록된 핸드폰번호입니다.</p>
-                    </li>
-                    <li>
+                        <!-- <p class="caution_cell" style="padding-top: 10px;">*숫자만 입력 가능합니다.</p> -->
+                        <!-- <p class="good2" style="display: none;">등록 가능한 핸드폰번호입니다.</p> -->
+                        <!-- <p class="alert2" style="display: none;">이미 등록된 핸드폰번호입니다.</p> -->
+                    </div>
+                    <div>
                         <p class="tit">sms 수신여부</p>
                         <p class="form_agree">
                             <span class="cs_form radio">
                                 <input type="radio" name="smsAllow" id="smsY" value="Y">
                                 <label for="smsY">수신함</label>
                             </span>
+                            &nbsp;&nbsp;&nbsp;
                             <span class="cs_form radio">
                                 <input type="radio" name="smsAllow" id="smsN" value="N">
                                 <label for="smsN">수신안함</label>
                             </span>
                         </p>
-                    </li>
-                    <li>
+                    </div>
+                    <div>
                         <p class="tit">생일</p>
                         <ul class="form_date">
-                            <li>
+                            <div>
                                 <select name="birth_yeay">
                                     <option value=""></option>
                                     <option value="2009">2009</option>
@@ -185,8 +191,8 @@
                                     <option value="1920">1920</option>
                                 </select>
                                 <span>년</span>
-                            </li>
-                            <li>
+                            </div>
+                            <div>
                                 <select name="birth">
                                     <option value=""></option>
                                     <option value="01">01</option>
@@ -203,8 +209,8 @@
                                     <option value="12">12</option>
                                 </select>
                                 <span>월</span>
-                            </li>
-                            <li>
+                            </div>
+                            <div>
                                 <select name="birth">
                                     <option value=""></option>
                                     <option value="01">01</option>
@@ -240,20 +246,20 @@
                                     <option value="31">31</option>
                                 </select>
                                 <span>일</span>
-                            </li>
+                            </div>
                         </ul>
-                    </li>
-                    <li>
+                    </div>
+                    <div>
                         <p class="tit">이메일</p>
                         <ul class="form_email">
-                            <li>
+                            <div>
                                 <input type="text" name="join_email">
-                                <span>@</span>
-                            </li>
-                            <li>
+                                <!-- <span>@</span> -->
+                            </div>
+                            <div>
                                 <input type="text" name="join_email1">
-                            </li>
-                            <li>
+                            </div>
+                            <div>
                                 <select name="join_email_sel" id="join_id_sel">
                                     <option value="">선택</option>
                                     <option value="naver.com">naver.com</option>
@@ -261,23 +267,23 @@
                                     <option value="daum.net">daum.net</option>
                                     <option value="etc">직접입력</option>
                                 </select>
-                            </li>
+                            </div>
                         </ul>
-                        <p class="cation_email" style="padding-top: 10px;">*영문, 숫자만 입력 가능합니다.</p>
-                        <p class="good3" style="display: none;">사용가능한 이메일입니다.</p>
-                        <p class="alert3" style="display: none;">이미 사용중인 이메일입니다.</p>
-                    </li>
+                        <!-- <p class="cation_email" style="padding-top: 10px;">*영문, 숫자만 입력 가능합니다.</p> -->
+                        <!-- <p class="good3" style="display: none;">사용가능한 이메일입니다.</p> -->
+                        <!-- <p class="alert3" style="display: none;">이미 사용중인 이메일입니다.</p> -->
+                    </div>
                     <ul class="btnbox">
-                        <li>
-                            <button type="submit" class="btn_m_red">
+                        <div>
+                            <button type="submit" class="btn-m-red">
                                 <span>가입</span>
                             </button>
-                        </li>
-                        <li>
-                            <button type="button" class="btn-m-line">
+                        </div>
+                        <div>
+                            <button type="button" class="btn-m-divne">
                                 <span>취소</span>
                             </button>
-                        </li>
+                        </div>
                     </ul>
 
                 </div>
